@@ -11,7 +11,15 @@
 <?php
 
 echo "Hello World";
+$pass = 'Americo';
+$test = password_hash($pass, PASSWORD_DEFAULT);
+echo $test;
+if (password_verify($pass, $test)) {
+      echo 'password matches';
+}else{
 
+  echo "no match";
+}
 ?>
 <!--Echo HTML tags-->
 </body>
